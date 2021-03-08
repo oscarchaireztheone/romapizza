@@ -1,0 +1,56 @@
+<div class="container" id="main_nav_container" style="font-size: 115%">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href=<%=root_path%>>Roma<span class="sr-only">(current)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=pizza_path%>>Pizza</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=appetizers_path%>>Wings Appetizers</br> & Salads</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=desserts_path%>>Deserts</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=calzones_path%>>Calzones & Pasta</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=subs_path%>>Subs</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=<%=specials_path%>>Specials</a>
+        </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Store Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a href="<%= Store::CLAYTON_STORE_MAPS_LINK %>">
+                Clayton (919) 550-7070
+              </a>
+              <%= link_to "Menu", full_menu_clayton_path %>
+
+
+            <div class="dropdown-divider"></div>
+            <a href="<%= Store::DURHAM_STORE_MAPS_LINK %>">
+                  Durham (919)957-7662 
+            </a>
+            <%= link_to "Menu", full_menu_durham_path %>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</div>

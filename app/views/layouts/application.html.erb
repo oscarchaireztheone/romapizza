@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Romapizza</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'  %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+
+  <body class="site">
+    <!-- for Facebook -->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=1394905460770041&autoLogAppEvents=1" nonce="AK5TzDFi"></script>
+<!-- end for facebook -->
+  <%= render "shared/header" %>
+  <div id="nav_anchor"></div>
+  <%= render "shared/navy" %>
+  <%= render "shared/phone" %>
+  <div class="container">
+    <div class="content">
+     <p id="demo"></p>
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class= "container">
+    <%= render "shared/footer" %>
+  </div>
+</body>
+</html>
